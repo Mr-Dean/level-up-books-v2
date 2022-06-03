@@ -14,7 +14,11 @@ import {
   getFirestore, 
   doc, 
   getDoc, 
-  setDoc
+  setDoc,
+  collection,
+  writeBatch,
+  query,
+  getDocs
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -27,9 +31,9 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
-  const googleProvider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
   prompt: "select_account",
@@ -89,3 +93,36 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);
+
+//Book database functions //
+
+
+// function to add handwritten book data to db.
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.category);
+    batch.set(docRef, object)
+  });
+
+  await batch.commit();
+  console.log('done');
+};
+
+
+// fetch book data from db.
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, 'categories');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title] = items;
+    return acc;
+  }, {})
+
+  return categoryMap;
+}

@@ -4,6 +4,7 @@ import logo from '../../assets/1up1.png';
 import './navigation.styles.scss';
 
 const Navigation = () => {
+
     return (
         <Fragment>
             <div className='navigation'>
