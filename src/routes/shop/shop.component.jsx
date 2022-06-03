@@ -1,11 +1,17 @@
+import { useContext } from "react";
+import { CategoriesContext } from "../../contexts/categories.context";
 
 
 
 
 
 const Shop = () => {
+    const { categoriesMap } = useContext(CategoriesContext);
   return (
-    <h1>THIS IS THE SHOP PAGE</h1>
+    <div>
+        {Object.keys(categoriesMap).map((category) =>  <h1 key={category}>{category}</h1>
+        )}
+    </div>
   );
 };
 
