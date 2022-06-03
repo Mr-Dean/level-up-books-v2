@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../../components/button/button.component";
 import './home.styles.scss';
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
                 <p>Specially curated book selection offering you the only the best knowledge to level up your life.<br/>
                 We only stock the best of the best, to make make you better than the rest.</p>
                 <Link style={{textDecoration: 'none'}} to='/shop'>
-                    <button>SHOP NOW</button>
+                    <Button>SHOP NOW</Button>
                 </Link>    
             </div>
         </div>
