@@ -1,0 +1,16 @@
+.book-card-container {
+    width: 350px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+
+    
+        .book-img {
+            max-height:300px;
+        }
+    
+}

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
-import logo from '../../assets/1up1.png';
+import logo from '../../assets/levelup.png';
 import './navigation.styles.scss';
 
 const Navigation = () => {

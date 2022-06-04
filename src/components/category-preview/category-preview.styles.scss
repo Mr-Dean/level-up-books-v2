@@ -1,0 +1,20 @@
+.category-preview-container {
+    max-width: 100%;
+    
+
+
+    .category-header {
+        width: 100%;
+        background-color: rgb(124, 124, 154);
+        color: white;
+        
+        padding: 30px;
+    }
+
+    .preview {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+}
