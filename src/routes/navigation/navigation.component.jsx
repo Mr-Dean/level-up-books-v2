@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from '../../assets/levelup.png';
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import CartIcon from "../../components/cart-icon/cart-icon.component";
 import './navigation.styles.scss';
 
 const Navigation = () => {
@@ -21,7 +23,9 @@ const Navigation = () => {
                     <Link className='nav-link' to='/auth'>
                         SIGN IN
                     </Link>
+                    <CartIcon />
                 </div>
+                <CartDropdown />
             </div>
             <Outlet />
         </Fragment>
