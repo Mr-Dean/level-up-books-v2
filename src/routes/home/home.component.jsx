@@ -8,7 +8,7 @@ const Home = () => {
             <div className='text-container'>
                 <h2>It's time to level up!</h2>
                 <p>Specially curated book selection offering you the only the best knowledge to level up your life.<br/>
-                We only stock the best of the best, to make make you better than the rest.</p>
+                We only stock the best of the best!</p>
                 <Link style={{textDecoration: 'none'}} to='/shop'>
                     <Button>SHOP NOW</Button>
                 </Link>    
