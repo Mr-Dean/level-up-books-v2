@@ -7,7 +7,7 @@ import './authentication.styles.scss';
 const Authentication = () => {
     return (
         <>
-        <h1>Sign in</h1>
+        <h1 style={{textAlign: "center"}}>Sign In</h1>
         <div className='authentication-container'>
             
             <SignInForm />
