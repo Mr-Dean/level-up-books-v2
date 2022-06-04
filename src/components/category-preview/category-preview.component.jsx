@@ -7,10 +7,11 @@ import './category-preview.styles.scss';
 const CategoryPreview = ({category, products}) => {
     return (
         <div className='category-preview-container'>
-            <h2 className='category-header'>
-                {category.toUpperCase()}
-                
-            </h2>
+            
+            <div className='category-header'>
+                <Link style={{textDecoration: "none", color: "white"}}to={category}><h2>{category.toUpperCase()}</h2></Link>
+                <span>View All</span>
+            </div>
             <div className='preview'>
                 {
                     products.filter((_, index) => index < 4).map((product) => <BookCard key={product.id} product={product} />)
