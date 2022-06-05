@@ -16,7 +16,7 @@ const CheckoutItem = ({cartItem}) => {
             <div className='image-container'>
                 <img src={imageUrl} alt={title} />
             </div>
-            <span className='title'>{title.substring(0, 20) + '...'}</span>
+            <span className='title'>{title.substring(0, 15) + '...'}</span>
             <span className='quantity'>
                 <div className='arrow' onClick={removeItemHandler}>-</div>
                 <span className='value'>{quantity}</span>
