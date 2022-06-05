@@ -16,11 +16,11 @@ const CheckoutItem = ({cartItem}) => {
             <div className='image-container'>
                 <img src={imageUrl} alt={title} />
             </div>
-            <span className='title'>{title}</span>
+            <span className='title'>{title.substring(0, 20) + '...'}</span>
             <span className='quantity'>
-                <div className='arrow' onClick={removeItemHandler}>&#10094;</div>
+                <div className='arrow' onClick={removeItemHandler}>-</div>
                 <span className='value'>{quantity}</span>
-                <div className='arrow' onClick={addItemHandler}>&#10095;</div>
+                <div className='arrow' onClick={addItemHandler}>+</div>
             </span>
             <span className='price'>{price}</span>
             <span className='remove-button' onClick={clearItemHandler}>&#10005;</span>
