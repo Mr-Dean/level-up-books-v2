@@ -9,8 +9,8 @@ const CategoryPreview = ({category, products}) => {
         <div className='category-preview-container'>
             
             <div className='category-header'>
-                <Link style={{textDecoration: "none", color: "white"}}to={category}><h2>{category.toUpperCase()}</h2></Link>
-                <Link style={{textDecoration: "none", color: "white"}}to={category}><span>View All</span></Link>
+                <Link className='category-link' to={category}><h2>{category.toUpperCase()}</h2></Link>
+                <Link className='category-link' to={category}><span>View All</span></Link>
             </div>
             <div className='preview'>
                 {

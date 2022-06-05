@@ -1,7 +1,6 @@
 .book-card-container {
     width: 350px;
-    height: 550px;
-    
+    height: 500px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -10,6 +9,17 @@
     margin: 20px;
     text-align: center;
     padding: 10px;
+    font-size: 14px;
+
+    .book-author {
+        font-size: 12px;
+    }
+
+    .book-price {
+        margin: 10px;
+        font-weight: bold;
+        font-size: 16px;
+    }
 
 
     -webkit-box-shadow: 1px 0px 44px -15px rgba(0,0,0,0.53);
@@ -20,7 +30,7 @@
 
     
         .book-img {
-            max-height:300px;
+            max-height:250px;
             -webkit-box-shadow: 5px 5px 16px -3px rgba(0,0,0,0.47); 
             box-shadow: 5px 5px 16px -3px rgba(0,0,0,0.47);
         }

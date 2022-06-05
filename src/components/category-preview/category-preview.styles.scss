@@ -1,9 +1,6 @@
 .category-preview-container {
     width: 100vw;
 
-    
-
-
     .category-header {
         display: flex;
         justify-content: space-between;
@@ -11,7 +8,18 @@
         background-color: rgb(176, 168, 250);
         color: white;
         text-decoration: none;
-        padding: 10px 35px;
+        padding: 0px 35px;
+
+
+        .category-link {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color:rgb(35, 1, 64);
+
+            }
+        }
     }
 
     .preview {

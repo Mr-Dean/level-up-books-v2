@@ -18,16 +18,16 @@ const Category = () => {
     
 
     return (
-        <>
+        <div className='category-page-container'>
             <h2 className='category-page-title'>{category.toUpperCase()}</h2>
-            <div className='category-page-container'>
+            <div className='category-books-container'>
                 {
                     products && products.map((product) => (
                         <BookCard key={product.id} product={product} />
                     ))
                 }
             </div>
-        </>
+        </div>
     );
 };
 
