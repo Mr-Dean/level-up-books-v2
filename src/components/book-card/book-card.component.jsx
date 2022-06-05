@@ -14,7 +14,7 @@ const BookCard = ({product}) => {
         <div className='book-card-container'>
             <img className='book-img'src={imageUrl} alt={title} />
             <h3>{title}</h3>
-            <p>{author}</p>
+            <span>{author}</span>
             <span>£{price}</span>
             <Button onClick={addProductToCart}>ADD TO CART</Button>
         </div>

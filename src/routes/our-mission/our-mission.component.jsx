@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom';
 import './our-mission.styles.scss';
 
 import Button from '../../components/button/button.component';
+import rocket from '../../assets/blastoff.png';
 
 
 const OurMissionPage = () => ( 
     <div className='mission-page'>
+        <img src={rocket} alt='rocket logo' />
+        
         <h1>Our Mission</h1>
         <p>We at Level Up Bookstore are passionate about self development. 
         Books can offer us a wealth of experience and knowledge by experts who have dedicated their life to particular fields of expertise. 
