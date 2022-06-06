@@ -1,11 +1,18 @@
-.sign-up-container {
+ .sign-up-container {
     display: flex;
     flex-direction: column;
     width: 400px;
     margin: 20px;
-    
+    @media only screen and (max-width: 768px) {
+      width: 80%;
+    }
   
     h2 {
       margin: 10px 0;
     }
+  }
+
+  .buttons-container {
+      display:flex;
+      justify-content: space-evenly;
   }
